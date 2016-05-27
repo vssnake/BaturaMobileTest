@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <ImageView
+        android:src="@drawable/pikachu"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:id="@+id/pokemon_main_image"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp" />
+
+    <TextView
+        android:text="@string/pokemon_name"
+        android:textSize="@dimen/contact_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/pokemon_main_name"
+        android:layout_alignTop="@+id/pokemon_main_image"
+        android:layout_toRightOf="@+id/pokemon_main_image"
+        android:layout_toEndOf="@+id/pokemon_main_image"
+        android:layout_marginLeft="5dp"
+        android:textStyle="normal|bold" />
+
+    <TextView
+        tools:text="Pikachu"
+        android:textSize="@dimen/contact_title_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/pokemon_main_name_text"
+        android:layout_alignLeft="@+id/pokemon_main_name"
+        android:layout_alignStart="@+id/pokemon_main_name"
+        android:layout_below="@+id/pokemon_main_name" />
+
+    <TextView
+        android:text="@string/pokemon_type1"
+        android:textSize="@dimen/contact_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pokemon_main_image"
+        android:layout_alignRight="@+id/pokemon_main_image"
+        android:layout_alignEnd="@+id/pokemon_main_image"
+        android:layout_marginTop="22dp"
+        android:id="@+id/pokemon_main_type1"
+        android:textStyle="normal|bold" />
+
+    <FrameLayout
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/pokemon_type_shape"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:layout_alignTop="@+id/pokemon_main_type2"
+        android:layout_alignLeft="@+id/pokemon_main_name_text"
+        android:layout_alignStart="@+id/pokemon_main_name_text"
+        android:layout_marginLeft="29dp"
+        android:layout_marginStart="29dp"
+        android:id="@+id/frameLayout">
+
+        <TextView
+            tools:text="Volador"
+            android:textSize="@dimen/contact_title_text"
+            android:layout_width="match_parent"
+
+            android:id="@+id/pokemon_main_type2_text"
+
+
+            android:layout_height="match_parent"
+            android:gravity="center" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/pokemon_type_shape"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:layout_alignTop="@+id/pokemon_main_type1"
+        android:layout_alignLeft="@+id/frameLayout"
+        android:layout_alignStart="@+id/frameLayout"
+        android:id="@+id/frameLayout2">
+
+        <TextView
+            tools:text="Electrico"
+            android:textSize="@dimen/contact_title_text"
+            android:layout_width="match_parent"
+
+            android:id="@+id/pokemon_main_type1_text"
+
+
+            android:layout_height="match_parent"
+            android:gravity="center" />
+    </FrameLayout>
+
+    <TextView
+        android:text="@string/pokemon_type2"
+        android:textSize="@dimen/contact_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="26dp"
+        android:id="@+id/pokemon_main_type2"
+        android:textStyle="normal|bold"
+        android:layout_below="@+id/frameLayout2"
+        android:layout_alignLeft="@+id/pokemon_main_type1"
+        android:layout_alignStart="@+id/pokemon_main_type1" />
+
+    <include
+        layout="@layout/loading_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"/>
+
+</RelativeLayout>

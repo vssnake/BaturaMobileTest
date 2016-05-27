@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+
+    android:gravity="center"
+
+
+
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:orientation="vertical"
+    android:clickable="true"
+    android:id="@+id/pokedex_view_holder_container">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:paddingLeft="@dimen/margin"
+        android:paddingRight="@dimen/margin"
+        android:elevation="24dp">
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="1"
+            android:textSize="20sp"
+            android:id="@+id/pokedex_view_holder_number_pokemon"
+            android:gravity="center"
+            android:layout_marginLeft="20dp"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            tools:text="Bulbasaur"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/podedex_view_holder_name_pokemon"
+            android:textSize="26sp"
+            android:layout_toRightOf="@+id/pokedex_view_holder_number_pokemon"
+            android:layout_toEndOf="@+id/pokedex_view_holder_number_pokemon"
+            android:layout_marginLeft="60dp"
+            android:textColor="@android:color/white" />
+
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:id="@+id/view"
+        android:background="@color/abc_input_method_navigation_guard" />
+</LinearLayout>
+
